@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
     <body>
-      <header className="sticky top-0  flex p-4 bg-[lightblue]">
+      <header className="sticky top-0  flex p-4 bg-black text-white">
         <p>Header</p>
       </header>
       {children}
-      <footer className="fixed bottom-0 w-full flex p-4 bg-[ghostwhite]">
+      <footer className="fixed bottom-0 w-full flex p-4 bg-black text-white">
         <p>Footer</p>
       </footer>
     </body>
