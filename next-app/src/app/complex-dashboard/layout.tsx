@@ -11,7 +11,7 @@ const DashBoardLayout = ({
   notifications: React.ReactNode;
   login: React.ReactNode;
 }) => {
-  const isLoggedIn = false;
+  const isLoggedIn = true;
   return isLoggedIn ? (
     <>
       <div>{children}</div>
