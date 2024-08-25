@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import "./global.css";
+import ThemeProvider from "@/components/theme-provider";
 export const metadata: Metadata = {
   title: {
     absolute: "",
@@ -12,15 +13,17 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
-    <body>
-      <header className="sticky top-0  flex p-4 bg-black text-white">
-        <p>Header</p>
-      </header>
-      {children}
-      <footer className="fixed bottom-0 w-full flex p-4 bg-black text-white">
-        <p>Footer</p>
-      </footer>
-    </body>
+    <ThemeProvider>
+      <body>
+        <header className="sticky top-0  flex p-4 bg-black text-white">
+          <p>Header</p>
+        </header>
+        {children}
+        <footer className="fixed bottom-0 w-full flex p-4 bg-black text-white">
+          <p>Footer</p>
+        </footer>
+      </body>
+    </ThemeProvider>
   </html>
 );
 
